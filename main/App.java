@@ -6,7 +6,6 @@ import java.util.LinkedList;
 import model.Castelo;
 import model.Europeu;
 import model.Japones;
-import util.Dado;
 import util.Sorteador;
 
 public class App 
@@ -27,9 +26,7 @@ public class App
 			
 			Castelo casteloAtacado = castelos.get(indiceCasteloAtacado);
 			
-			Dado dado = new Dado(6);
-			dado.girar();
-			int face = dado.getFace();
+			int face = Sorteador.sortear(0, 10); // Faz de conta que é um dado de 11 faces, de 0 até 10 (Não fiz um objeto Dado porque um dado não tem face 0)
 			
 			if (face == 0)
 			{
@@ -39,9 +36,10 @@ public class App
 			{
 				casteloAtacado.ataque(face);
 				System.out.printf(""
-					+ "Player da vez, perdeu %d guerreiros.%n"
+					+ "%s perdeu %d guerreiros.%n"
 					+ "Situação: %s%n"
 					, 
+					casteloAtacado.getNome(),
 					face,
 					casteloAtacado.situacao()
 				);
