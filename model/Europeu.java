@@ -26,10 +26,10 @@ public class Europeu extends Castelo
 				this.numPaladino += 10;
 				return true;
 			}
-		} 
-		else
-			this.numPaladino -= p;
-		return false;
+			return false;
+		}
+		this.numPaladino -= p;
+		return true;
 	}
 	
 	@Override
