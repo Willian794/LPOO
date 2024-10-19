@@ -28,12 +28,8 @@ public class Japones extends Castelo
 			}
 			return false;
 		}
-		
-		else 
-		{
-			this.numSamurai -= p;
-			return false;
-		}
+		this.numSamurai -= p;
+		return true;
 	}
 	
 	@Override
