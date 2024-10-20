@@ -16,13 +16,13 @@ public abstract class Castelo
 	public String situacao() 
 	{
 		return  String.format(""
+			+ "Nome: %s%n"
 			+ "Defesa: %d%n"
 			+ "Pontos de vida: %d%n"
-			+ "Nome: %s%n"
 			, 
+			this.nome,
 			this.defesa,
-			this.pontosVida,
-			this.nome
+			this.pontosVida
 		);
 	}
 	
