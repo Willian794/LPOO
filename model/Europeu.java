@@ -19,7 +19,9 @@ public class Europeu extends Castelo
 	@Override
 	public boolean ataque(int p)
 	{
-		if (p > this.numPaladino) 
+		this.numPaladino -= p;
+		
+		if (this.numPaladino < 0) 
 		{
 			if (super.ataque(p))
 			{
@@ -28,7 +30,6 @@ public class Europeu extends Castelo
 			}
 			return false;
 		}
-		this.numPaladino -= p;
 		return true;
 	}
 	

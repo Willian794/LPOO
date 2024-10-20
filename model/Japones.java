@@ -19,7 +19,9 @@ public class Japones extends Castelo
 	@Override
 	public boolean ataque(int p) 
 	{
-		if (p > this.numSamurai)
+		this.numSamurai -= p;
+		
+		if (this.numSamurai < 0)
 		{
 			if (super.ataque(p))
 			{
@@ -28,7 +30,6 @@ public class Japones extends Castelo
 			}
 			return false;
 		}
-		this.numSamurai -= p;
 		return true;
 	}
 	
