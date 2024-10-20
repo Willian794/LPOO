@@ -30,14 +30,15 @@ public class App
 			
 			if (face == 0)
 			{
-				System.out.println("Passou a vez!");
+				System.out.println("Passou a vez!\n");
 			}
 			else 
 			{
 				casteloAtacado.ataque(face);
 				System.out.printf(""
 					+ "%s perdeu %d guerreiros.%n"
-					+ "Situação: %s%n"
+					+ "Situação: %n"
+					+ "%s%n"
 					, 
 					casteloAtacado.getNome(),
 					face,
@@ -51,7 +52,7 @@ public class App
 				System.out.printf(""
 					+ "SITUACAO: %n"
 					+ "%s"
-					+ "CASTELO %s DESTRUIDO%n",
+					+ "CASTELO %s DESTRUIDO%n%n",
 					casteloAtacado.situacao(),
 					casteloAtacado.getNome()
 				);
@@ -60,6 +61,16 @@ public class App
 			if (casteloVez == castelos.size() - 1) casteloVez = 0;
 			else casteloVez++;
 		}
+		
+		Castelo vencedor = castelos.getFirst();
+		
+		System.out.printf(""
+			+ "SITUACAO: %n"
+			+ "%s"
+			+ "CASTELO %s VENCEDOR%n%n",
+			vencedor.situacao(),
+			vencedor.getNome()
+		);
 	}
 	
 	public static void preencherLista(LinkedList<Castelo> castelos)
