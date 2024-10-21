@@ -25,7 +25,7 @@ public class App
 		imprimirVencedor(vencedor);
 	}
 	
-	public static void jogarRodada(ArrayList<Castelo> castelos, int casteloVez)
+	public static void jogarRodada(LinkedList<Castelo> castelos, int casteloVez)
 	{
 		ArrayList<Integer> excessoes = new ArrayList<Integer>();
 		excessoes.add(casteloVez);
